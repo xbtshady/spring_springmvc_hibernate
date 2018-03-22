@@ -8,25 +8,46 @@ import javax.persistence.*;
  * Created by Administrator on 2018/3/21.
  */
 @Entity
-@Table(name = "Person")
+@Table(name = "user")
 public class Person {
 
     @Id
-    @GeneratedValue
-    private Long id;
+    private int id;
+    private int age;
+    private String first;
+    private String last;
 
-    @Column(name = "created")
-    private Long created = System.currentTimeMillis();
+    public int getId() {
+        return id;
+    }
 
-    @Column(name = "username")
-    private String username;
+    public void setId(int id) {
+        this.id = id;
+    }
 
-    @Column(name = "address")
-    private String address;
+    public int getAge() {
+        return age;
+    }
 
-    @Column(name = "phone")
-    private String phone;
+    public void setAge(int age) {
+        this.age = age;
+    }
 
-    @Column(name = "remark")
-    private String remark;
+
+    public String getFirst() {
+        return first;
+    }
+
+    public void setFirst(String first) {
+        this.first = first;
+    }
+
+    public String getLast() {
+        return last;
+    }
+
+    public void setLast(String last) {
+        this.last = last;
+    }
+
 }
